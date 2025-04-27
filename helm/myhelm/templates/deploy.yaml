@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: nginx-dep
+   labels:
+      app: dev
+      env: mydev
+spec:
+   replicas: 5
+   selector:
+      matchLabels:
+         env: mydev
+   template:
+      metadata:
+         labels:
+            env: mydev
+      spec:
+         containers:
+         - name: nginx
+           image: devpipeline/ravi:{{ .Values.image.tag }}

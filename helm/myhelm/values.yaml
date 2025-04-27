@@ -1,0 +1,9 @@
+# This is a YAML-formatted file.
+
+replicaCount: 1
+
+image:
+  repository: devpipeline/nginx
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "v1"
