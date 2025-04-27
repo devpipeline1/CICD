@@ -64,13 +64,6 @@ jobs:
 
     needs: update-newtag-in-helm-chart
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.TOKEN }}
-
-
     - name: Commit and push changes
       run: |
         git config --global user.email "devpipelinepulse@gmail.com"
