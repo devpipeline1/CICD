@@ -62,7 +62,7 @@ jobs:
   Push:
     runs-on: ubuntu-latest
 
-    needs: build
+    needs: update-newtag-in-helm-chart
 
     steps:
     - name: Checkout repository
